@@ -19,8 +19,11 @@ def player_and_host(doors):
 
 # Function to switch choice and check if player wins
 def check_win(doors, player_choice, host_choice, switch):
-    pass
-
+  if switch:
+    # Switch choice to the remaining door that is not opened by host
+    player_choice = next(i for i in range(3) if i != player_choice and i != host_choice)
+  return doors[player_choice] == "car" # Returns True if player wins
+    
 
 
 

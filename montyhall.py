@@ -2,7 +2,6 @@ import random  # Import the random library for shuffling and random choices
 
 # Function to set up doors and choose a door for the prize
 def setup_game():
-    def setup_game():
     doors = ["goat", "goat", "car"]  
     random.shuffle(doors)  
     return doors

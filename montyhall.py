@@ -10,7 +10,6 @@ def setup_game():
 
 
 
-
 # Function for player's choice and host revealing a goat door
 def player_and_host(doors):
     pass

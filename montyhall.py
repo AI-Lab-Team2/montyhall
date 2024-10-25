@@ -10,8 +10,11 @@ def setup_game():
 
 # Function for player's choice and host revealing a goat door
 def player_and_host(doors):
-    pass
+    player_choice = random.randint(0, 2) # Player picks a random door
 
+    # Host opens a door with a goat (not chosen by the player)
+    host_choice = next(i for i in range(3) if i != player_choice and doors[i] != "car")
+    return player_choice, host_choice
 
 
 

@@ -27,7 +27,13 @@ def check_win(doors, player_choice, host_choice, switch):
 
 # Main function to run simulations and print win rates
 def run_simulation(num_games, switch):
-    pass
+  wins = 0
+  for _ in range(num_games):
+    doors = setup_game()
+    player_choice, host_choice = player_and_host(doors)
+    if check_win(doors, player_choice, host_choice, switch):
+      wins += 1
+  print(f"Win rate when {'switching' if switch else 'not switching'}: {wins / num_games:.2f}")
 
 
 
